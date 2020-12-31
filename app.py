@@ -44,8 +44,9 @@ def init_world(name):
 
 @app.route('/index')
 def index():
-    return render_template("index.html")
+    return render_template("index.html",name ='张三',world='你好')
 
 
 if __name__ == '__main__':
+    app.debug = True
     app.run()
